@@ -1,3 +1,6 @@
+* {
+  font-family: "Domine", sans-serif;
+}
 body {
   background-image: url(./images/snow.jpg);
   background-repeat: no-repeat;
@@ -19,4 +22,16 @@ header {
 .cityBtn {
   background-color: skyblue;
   border: 2px solid white;
+  opacity: 60%;
+}
+.cityBtn:hover {
+  opacity: 100%;
+}
+.cityBtn:focus {
+  opacity: 100%;
+}
+
+.card {
+  opacity: 60%;
+  background-color: rgb(109, 136, 143);
 }
