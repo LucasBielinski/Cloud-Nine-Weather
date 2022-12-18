@@ -1,11 +1,14 @@
+/* sets font for all */
 * {
   font-family: "Domine", sans-serif;
 }
+/* sets rules for body */
 body {
   background-image: url(./images/snow.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 header {
   color: white;
@@ -13,24 +16,26 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100vw;
 }
 #sbmitbttn {
   color: white;
   background-color: blue;
 }
-
+/* sets rules for displaying past cities */
 .cityBtn {
   background-color: skyblue;
   border: 2px solid white;
   opacity: 60%;
 }
+/* changes opacity when past city selected */
 .cityBtn:hover {
   opacity: 100%;
 }
 .cityBtn:focus {
   opacity: 100%;
 }
-
+/* rules for cards */
 .card {
   opacity: 60%;
   background-color: rgb(109, 136, 143);
