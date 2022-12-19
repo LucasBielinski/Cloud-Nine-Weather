@@ -1,9 +1,7 @@
 var searchButton = document.getElementById("sbmitbttn");
 var cityInput = document.getElementById("inputSearch");
 var pastCity = document.getElementById("saved");
-var oldCity = document.getElementsByClassName("cityBtn");
 
-console.log(oldCity);
 // formats card for current forcast
 function currentCardFormatter(weather) {
   console.log("Current wether Formatter");
@@ -29,10 +27,10 @@ function fiveDayFormatter(weatherArr) {
   console.log("Five Days coming up!");
   console.log(weatherArr);
   var fiveDayCard = document.getElementById("five-day");
-  fiveDayCard.innerHTML = "";
+  fiveDayCard.innerHTML = "<div class='col-sm-10 col-lg-1'></div>";
   // has to be a quicker way to do this, refactor later if time allows
   fiveDayCard.innerHTML += `
-  <div class="col-sm-9 col-lg-3">
+  <div class="col-sm-10 col-lg-2">
   <div class="card">
   <div class="card-body">
   <p class="card-text"> ${weatherArr[0].dt_txt} </P>
@@ -97,6 +95,7 @@ function beginSearch(event) {
   var cityName = cityInput.value.trim();
 
   if (cityName) {
+    saveCity();
     findCity(cityName);
     console.log(cityName);
     reset();
@@ -166,7 +165,7 @@ var findCity = function (cityId) {
         })
         .then(function (weather) {
           // is successful call saveCity
-          saveCity();
+
           console.log(weather.list);
           // inptus current weather
           currentCardFormatter(weather.list[0]);
@@ -196,14 +195,25 @@ function init() {
   pastCity.innerHTML = "";
   for (const city of storedCity) {
     console.log(city);
-    pastCity.innerHTML += `<button class="col-2 btn past cityBtn px-2 ml-2">${city}</button>`;
+    pastCity.innerHTML += `<button class="col-2 btn past cityBtn px-2 ml-2" data-name="${city}">${city}</button>`;
   }
+  pastCity.addEventListener("click", searchOldCity);
 }
 
 // replaces old city info with new
 function reset() {
   currentCardPlace.empty();
   fiveDayCard.empty();
+}
+// grabs button name and researches it
+var oldCity = document.getElementsByClassName("cityBtn");
+console.log(oldCity);
+function searchOldCity(event) {
+  var button = event.target;
+  if (button.matches(".cityBtn")) {
+    var research = button.innerHTML;
+    findCity(research);
+  }
 }
 
 searchButton.addEventListener("click", beginSearch);

@@ -7,8 +7,7 @@ body {
   background-image: url(./images/snow.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
 }
 header {
   color: white;
@@ -16,7 +15,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
 }
 #sbmitbttn {
   color: white;
