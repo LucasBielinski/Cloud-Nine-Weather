@@ -15,7 +15,7 @@ function currentCardFormatter(weather) {
   currentCardPlace.innerHTML += `
 <div class="card-body">
   <p class="card-text"> ${weather.dt_txt} </p>
-  <img src= http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png></img>
+  <img src= https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png></img>
   <p class="card-text"> Weather: ${weather.weather[0].main} </p>
   <p class="card-text"> Desc: ${weather.weather[0].description}</p>
   <p class="card-text"> Temp: ${weather.main.temp}</p>
@@ -34,7 +34,7 @@ function fiveDayFormatter(weatherArr) {
   <div class="card">
   <div class="card-body">
   <p class="card-text"> ${weatherArr[0].dt_txt} </P>
-  <img src= http://openweathermap.org/img/wn/${weatherArr[0].weather[0].icon}@2x.png></img>
+  <img src= https://openweathermap.org/img/wn/${weatherArr[0].weather[0].icon}@2x.png></img>
   <p class="card-text"> Weather: ${weatherArr[0].weather[0].main} </p>
   <p class="card-text"> Desc: ${weatherArr[0].weather[0].description}</p>
   <p class="card-text"> Temp: ${weatherArr[0].main.temp}</p>
@@ -45,7 +45,7 @@ function fiveDayFormatter(weatherArr) {
   <div class="card">
   <div class="card-body">
   <p class="card-text"> ${weatherArr[1].dt_txt} </P>
-  <img src= http://openweathermap.org/img/wn/${weatherArr[1].weather[0].icon}@2x.png></img>
+  <img src= https://openweathermap.org/img/wn/${weatherArr[1].weather[0].icon}@2x.png></img>
   <p class="card-text"> Weather: ${weatherArr[1].weather[0].main} </p>
   <p class="card-text"> Desc: ${weatherArr[1].weather[0].description}</p>
   <p class="card-text"> Temp: ${weatherArr[1].main.temp}</p>
@@ -56,7 +56,7 @@ function fiveDayFormatter(weatherArr) {
   <div class="card">
   <div class="card-body">
   <p class="card-text"> ${weatherArr[2].dt_txt} </P>
-  <img src= http://openweathermap.org/img/wn/${weatherArr[2].weather[0].icon}@2x.png></img>
+  <img src= https://openweathermap.org/img/wn/${weatherArr[2].weather[0].icon}@2x.png></img>
   <p class="card-text"> Weather: ${weatherArr[2].weather[0].main} </p>
   <p class="card-text"> Desc: ${weatherArr[2].weather[0].description}</p>
   <p class="card-text"> Temp: ${weatherArr[2].main.temp}</p>
@@ -67,7 +67,7 @@ function fiveDayFormatter(weatherArr) {
   <div class="card">
   <div class="card-body">
   <p class="card-text"> ${weatherArr[3].dt_txt} </P>
-  <img src= http://openweathermap.org/img/wn/${weatherArr[3].weather[0].icon}@2x.png></img>
+  <img src= https://openweathermap.org/img/wn/${weatherArr[3].weather[0].icon}@2x.png></img>
   <p class="card-text"> Weather: ${weatherArr[3].weather[0].main} </p>
   <p class="card-text"> Desc: ${weatherArr[3].weather[0].description}</p>
   <p class="card-text"> Temp: ${weatherArr[3].main.temp}</p>
@@ -78,7 +78,7 @@ function fiveDayFormatter(weatherArr) {
   <div class="card">
   <div class="card-body">
   <p class="card-text"> ${weatherArr[4].dt_txt} </P>
-  <img src= http://openweathermap.org/img/wn/${weatherArr[4].weather[0].icon}@2x.png></img>
+  <img src= https://openweathermap.org/img/wn/${weatherArr[4].weather[0].icon}@2x.png></img>
   <p class="card-text"> Weather: ${weatherArr[4].weather[0].main} </p>
   <p class="card-text"> Desc: ${weatherArr[4].weather[0].description}</p>
   <p class="card-text"> Temp: ${weatherArr[4].main.temp}</p>
@@ -126,7 +126,7 @@ function saveCity() {
 // calls location apu
 var findCity = function (cityId) {
   var url =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     cityId +
     "&limit=1&appid=1fe1270c934256178352d8b9b50ce7a4";
   console.log(url);
