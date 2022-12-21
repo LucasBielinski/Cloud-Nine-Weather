@@ -26,66 +26,25 @@ function currentCardFormatter(weather) {
 function fiveDayFormatter(weatherArr) {
   console.log("Five Days coming up!");
   console.log(weatherArr);
+
   var fiveDayCard = document.getElementById("five-day");
   fiveDayCard.innerHTML = "<div class='col-sm-10 col-lg-1'></div>";
-  // has to be a quicker way to do this, refactor later if time allows
-  fiveDayCard.innerHTML += `
+  // refactored
+  for (let i = 0; i < weatherArr.length; i++) {
+    fiveDayCard.innerHTML += `
   <div class="col-sm-10 col-lg-2">
-  <div class="card">
+  <div class="card five">
   <div class="card-body">
-  <p class="card-text"> ${weatherArr[0].dt_txt} </P>
-  <img src= https://openweathermap.org/img/wn/${weatherArr[0].weather[0].icon}@2x.png></img>
-  <p class="card-text"> Weather: ${weatherArr[0].weather[0].main} </p>
-  <p class="card-text"> Desc: ${weatherArr[0].weather[0].description}</p>
-  <p class="card-text"> Temp: ${weatherArr[0].main.temp}</p>
-  </div>
-  </div>
-  </div>
-  <div class="col-sm-10 col-lg-2">
-  <div class="card">
-  <div class="card-body">
-  <p class="card-text"> ${weatherArr[1].dt_txt} </P>
-  <img src= https://openweathermap.org/img/wn/${weatherArr[1].weather[0].icon}@2x.png></img>
-  <p class="card-text"> Weather: ${weatherArr[1].weather[0].main} </p>
-  <p class="card-text"> Desc: ${weatherArr[1].weather[0].description}</p>
-  <p class="card-text"> Temp: ${weatherArr[1].main.temp}</p>
-  </div>
-  </div>
-  </div>
-  <div class=" col-sm-10 col-lg-2">
-  <div class="card">
-  <div class="card-body">
-  <p class="card-text"> ${weatherArr[2].dt_txt} </P>
-  <img src= https://openweathermap.org/img/wn/${weatherArr[2].weather[0].icon}@2x.png></img>
-  <p class="card-text"> Weather: ${weatherArr[2].weather[0].main} </p>
-  <p class="card-text"> Desc: ${weatherArr[2].weather[0].description}</p>
-  <p class="card-text"> Temp: ${weatherArr[2].main.temp}</p>
-  </div>
-  </div>
-  </div>
-  <div class="col-sm-10 col-lg-2 ">
-  <div class="card">
-  <div class="card-body">
-  <p class="card-text"> ${weatherArr[3].dt_txt} </P>
-  <img src= https://openweathermap.org/img/wn/${weatherArr[3].weather[0].icon}@2x.png></img>
-  <p class="card-text"> Weather: ${weatherArr[3].weather[0].main} </p>
-  <p class="card-text"> Desc: ${weatherArr[3].weather[0].description}</p>
-  <p class="card-text"> Temp: ${weatherArr[3].main.temp}</p>
-  </div>
-  </div>
-  </div>
-  <div class="col-sm-10 col-lg-2">
-  <div class="card">
-  <div class="card-body">
-  <p class="card-text"> ${weatherArr[4].dt_txt} </P>
-  <img src= https://openweathermap.org/img/wn/${weatherArr[4].weather[0].icon}@2x.png></img>
-  <p class="card-text"> Weather: ${weatherArr[4].weather[0].main} </p>
-  <p class="card-text"> Desc: ${weatherArr[4].weather[0].description}</p>
-  <p class="card-text"> Temp: ${weatherArr[4].main.temp}</p>
+  <p class="card-text"> ${weatherArr[i].dt_txt} </P>
+  <img src= https://openweathermap.org/img/wn/${weatherArr[i].weather[0].icon}@2x.png></img>
+  <p class="card-text"> Weather: ${weatherArr[i].weather[0].main} </p>
+  <p class="card-text"> Desc: ${weatherArr[i].weather[0].description}</p>
+  <p class="card-text"> Temp: ${weatherArr[i].main.temp}</p>
   </div>
   </div>
   </div>
   `;
+  }
 }
 
 // searches city name, if no city name returns error

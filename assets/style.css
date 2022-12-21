@@ -38,3 +38,7 @@ header {
   opacity: 60%;
   background-color: rgb(109, 136, 143);
 }
+
+.five {
+  min-height: 301.6px;
+}
