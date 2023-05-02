@@ -23,3 +23,11 @@ banner image by Leviathan1983
 https://commons.wikimedia.org/wiki/User:Leviathan1983
 backround image by Vyacheslav Argenberg
 https://commons.wikimedia.org/wiki/User:Argenberg
+
+## How to Contribute
+
+For questions and contributions, you can reach me here:
+[Email](mailto:bielinskilucas@gmail.com)
+or
+[Github](https://github.com/LucasBielinski)
+
