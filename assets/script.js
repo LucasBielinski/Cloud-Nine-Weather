@@ -154,14 +154,14 @@ function init() {
   pastCity.innerHTML = "";
   for (const city of storedCity) {
     console.log(city);
-    pastCity.innerHTML += `<button class="col-2 btn past cityBtn px-2 ml-2" data-name="${city}">${city}</button>`;
+    pastCity.innerHTML += `<button class="col-sm-2 btn past cityBtn px-2 ml-2" data-name="${city}">${city}</button>`;
   }
   pastCity.addEventListener("click", searchOldCity);
 }
 
 // replaces old city info with new
 function reset() {
-  currentCardPlace.empty();
+  // currentCardPlace.empty();
   fiveDayCard.empty();
 }
 // grabs button name and researches it
