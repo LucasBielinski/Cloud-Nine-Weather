@@ -13,6 +13,7 @@ N/A
 To use the app, simply type in the name of a city to look up the weather. Today's weather and the week's weather will be displayed. If you fail to enter in the name of the city, or the API is down, you will receive an error.
 
 ![image of project](./assets/images/cloudnine.png)
+https://lucasbielinski.github.io/Cloud-Nine-Weather/
 
 ## Credits
 
